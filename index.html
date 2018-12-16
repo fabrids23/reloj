@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8"/>
+    <meta name="description" content="HeartRateMonitor"/>
+    <title>Heart Rate Monitor</title>
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css" />
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+          href="lib/tau/wearable/theme/default/tau.circle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body>
+
+<div class="ui-page ui-page-active" id="main">
+    <div class="ui-header">
+        <h2 class="ui-title">Heart Rate Monitor</h2>
+    </div>
+
+    <div class="ui-content">
+        <input placeholder="-" style="text-align:center" style="height:500px" type="number" name="word" id="interval" min = "1"  max="20"/>
+        <div id="heart-rate-value"></div>
+
+    </div>
+
+    <footer class="ui-footer ui-bottom-button ui-fixed">
+        <button class="ui-btn" id="btn-start">START</button>
+    </footer>
+
+</div>
+<div class="ui-page" id="info">
+    <div class="ui-header">
+        <h2 class="ui-title">HRM Info</h2>
+    </div>
+    <div class="ui-content">
+        <div class="info-text">
+            Try again. Clean the sensor, then attach Gear snugly to top or under side of wrist, not against the bone. Be still and quiet.
+        </div>
+    </div>
+
+</div>
+
+
+<script src="./lib/tau/wearable/js/tau.js"></script>
+<script src="./js/core/core.js" data-main="./js/app.js"></script>
+
+</body>
+</html>
